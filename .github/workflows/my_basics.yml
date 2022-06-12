@@ -28,7 +28,7 @@ jobs:
     steps: 
     - name: print Hello in testing
       run: echo "Hello Viktor from testing job"
-    - name: Execure few commands
+    - name: Execure few comannds
       run: |
         echo: "Hello Message1"
         echo: "Hello Message2"
