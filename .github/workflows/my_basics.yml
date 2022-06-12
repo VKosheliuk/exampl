@@ -47,12 +47,32 @@ jobs:
   my_deploy: 
     runs-on: ubuntu-latest
     needs: [my_testing]
+    env:
+     VAR1: "Level Variable1"
+     VAR2: "Level Variable2"
+     
     steps: 
     - name: print Hello in deploy
       run: echo "Hello Viktor from deploy job"
     - name: Deployment packet
       run: echo " Printing is ${{ env.PACKAGE_NAME }}"
     
+    - name: Lests test 1
+      run: aws --version
+      
+    - name: Lests test 2
+      run: zip --version
+    
+    - name: print env var
+      run: |
+       echo " Var1 = ${{ env.VAR1 }}"
+       echo " Var2 = ${{ env.VAR2 }}"
+       echo " var3 = $LOCAL_VAR"
+      env: 
+       LOCAL_ENV: "This is local enviroment"
+       
+      
+      
     
   
  
