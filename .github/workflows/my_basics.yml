@@ -5,10 +5,6 @@ name: CI_CD
 env:
  APPLICATION_NAME: "MyFlsk"
  PACKAGE_NAME    : "DEPLOY-FLASK-${{ github.sha }}"
- 
- 
-  
- 
 
 # Controls when the workflow will run
 on: 
@@ -36,7 +32,7 @@ jobs:
       run: |
         echo: "Hello 1"
         echo: "Hello 2"
-        echo: "ApplicationNme: ${{ env.APPLICATION_NAME }}
+        echo: "APPLICATION_NAME: ${{ env.APPLICATION_NAME }}
       
          
   my_deploy: 
