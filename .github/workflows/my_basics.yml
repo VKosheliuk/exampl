@@ -33,7 +33,7 @@ jobs:
       run: |
        echo "Hello Message1"
        echo "Hello Message2"
-       echo "Aplication name: S{{ env.APPLICATION_NAME }}"
+       echo "Aplication name: ${{ env.APPLICATION_NAME }}"
          
   my_deploy: 
     runs-on: ubuntu-latest
