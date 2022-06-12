@@ -32,7 +32,7 @@ jobs:
       run: |
         echo: "Hello 1"
         echo: "Hello 2"
-        echo: "APPLICATION_NAME: ${{ env.APPLICATION_NAME }}
+        echo: "APPLICATION_NAME: ${{ env.APPLICATION_NAME }}"
       
          
   my_deploy: 
@@ -42,7 +42,7 @@ jobs:
     - name: print Hello in deploy
       run: echo "Hello Viktor from deploy job"
     - name: Deployment packet
-      run: echo " Printing is ${{ env.PACKAGE_NAME }}
+      run: echo " Printing is ${{ env.PACKAGE_NAME }}"
     
     
   
