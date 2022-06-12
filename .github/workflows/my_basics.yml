@@ -30,8 +30,8 @@ jobs:
       run: echo "Hello Viktor from testing job"
     - name: Execure few commands
       run: |
-        echo: "Hello 1"
-        echo: "Hello 2"
+        echo: "Hello Message1"
+        echo: "Hello Message2"
              
          
   my_deploy: 
