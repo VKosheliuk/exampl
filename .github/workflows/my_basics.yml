@@ -2,6 +2,13 @@
 # This is a basic workflow to help you get started with Actions
 #----------------------------------------
 name: CI_CD
+env:
+ APPLICATION_NAME: "MyFlsk"
+ PACKAGE_NAME    : "DEPLOY-FLASK-${{ github.sha }}"
+ 
+ 
+  
+ 
 
 # Controls when the workflow will run
 on: 
@@ -25,14 +32,22 @@ jobs:
     steps: 
     - name: print Hello in testing
       run: echo "Hello Viktor from testing job"
-   
-        
+    - name: Execure few commands
+      run: |
+        echo: "Hello 1"
+        echo: "Hello 2"
+        echo: "ApplicationNme: ${{ env.APPLICATION_NAME }}
+      
+         
   my_deploy: 
     runs-on: ubuntu-latest
     needs: [my_testing]
     steps: 
     - name: print Hello in deploy
       run: echo "Hello Viktor from deploy job"
+    - name: Deployment packet
+      run: echo " Printing is ${{ env.PACKAGE_NAME }}
+    
     
   
  
